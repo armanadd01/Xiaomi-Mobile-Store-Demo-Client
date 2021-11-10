@@ -18,12 +18,12 @@ const Navbar = () => {
                     }}>
                             {/* Site logo */}
                             
-                                <div className="navbar navbar-expand-md navbar-light w-100 m-0 p-0" style={{
+                                <div className="navbar navbar-expand-md navbar-danger w-100 m-0 p-0" style={{
                         zIndex: "99"
                     }}>
                                     <div className="col-md-2 col-sm-4 m-0 p-0 ">
                                         <div className="navbar-brand m-0 p-0 site-logo me-sm-5" >
-                                        <NavLink activeClassName=" text-light" className="nav-link fs-6" to="/home">
+                                        <NavLink activeClassName=" text-danger" className="nav-link fs-6" to="/home">
                                             <img className="w-50" src={logoImg} alt="" />
                                         </NavLink>
                                         </div>
@@ -52,18 +52,18 @@ const Navbar = () => {
                                             <div className="col-md-10">
                                                 <ul className="navbar-nav ">
                                                     <li className="nav-item p-2">
-                                                        <NavLink activeClassName="border-bottom border-danger border-5 rounded-bottom text-danger" className="nav-link fs-6 border-5 border-transparent fw-bold" to="/home">Home</NavLink>
+                                                        <NavLink activeClassName="border-bottom border-danger border-5 rounded-bottom text-danger fw-bold" className="nav-link fs-6 border-5 border-transparent text-danger" to="/home">Home</NavLink>
                                                     </li>
                                                     <li className="nav-item p-2">
-                                                        <NavLink activeClassName="border-bottom border-danger border-5 rounded-bottom text-danger" className="nav-link fs-6 border-5 border-transparent fw-bold" to="/plans">Plans</NavLink>
+                                                        <NavLink activeClassName="border-bottom border-danger border-5 rounded-bottom text-danger fw-bold" className="nav-link fs-6 border-5 border-transparent text-danger" to="/plans">Plans</NavLink>
                                                     </li>
                                                     <li className="nav-item p-2">
-                                                        <NavLink activeClassName="border-bottom border-danger border-5 rounded-bottom text-danger" className="nav-link fs-6 border-5 border-transparent fw-bold" to="/allorders">All Orders</NavLink>
+                                                        <NavLink activeClassName="border-bottom border-danger border-5 rounded-bottom text-danger fw-bold" className="nav-link fs-6 border-5 border-transparent text-danger" to="/allorders">All Orders</NavLink>
                                                     </li>
                                                     {/* { user?.displayName? */}
                                                     <li className="nav-item p-2">
                                                         {/* <NavLink activeClassName="border-bottom border-danger border-5 rounded-bottom text-danger" className="nav-link fs-6 border-5 border-transparent fw-bold" to={`/myorder/${user?.email}`} > */}
-                                                            My orders
+                                                            {/* My orders */}
                                                         {/* </NavLink> */}
                                                     </li>
                                                     {/* : */}
@@ -71,7 +71,7 @@ const Navbar = () => {
                                                     {/* } */}
                                                     {/* { user?.displayName? */}
                                                     <li className="nav-item p-2">
-                                                        <NavLink activeClassName="border-bottom border-danger border-5 rounded-bottom text-danger" className="nav-link fs-6 border-5 border-transparent fw-bold" to="/admindashboard">Admin Dashboard</NavLink>
+                                                        <NavLink activeClassName="border-bottom border-danger border-5 rounded-bottom text-danger fw-bold" className="nav-link fs-6 border-5 border-transparent text-danger" to="/admindashboard">Admin Dashboard</NavLink>
                                                     </li>
                                                     {/* : */}
                                                     {/* '' */}
@@ -88,7 +88,7 @@ const Navbar = () => {
                                                             </NavLink> */}
                                                             {/* :  */}
                                                             <NavLink to="/login">
-                                                            <button className="btn btn-outline-info me-2" ><FontAwesomeIcon icon={faSignInAlt}></FontAwesomeIcon></button>
+                                                            <button className="btn btn-outline-danger me-2" ><FontAwesomeIcon icon={faSignInAlt}></FontAwesomeIcon></button>
                                                             </NavLink>
                                                         {/* }  */}
                                                         

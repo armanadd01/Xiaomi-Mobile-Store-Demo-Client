@@ -1,8 +1,20 @@
 .App {
   width: 100%;
 }
+.ft-bg {
+  background-color:#F5F5F5;
+}
 
+.bnr-mt-5  {
+  margin-top: -5%;
+}
+.bnr-size-5 {
+  height: 100%;
+}
 
+.cs-bottom-5 {
+  bottom: 10rem !important;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
