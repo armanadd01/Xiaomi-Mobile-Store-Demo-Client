@@ -2,7 +2,8 @@ import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Button, Col, Container, FormControl, InputGroup, Row } from 'react-bootstrap';
-
+import { NavLink } from 'react-router-dom';
+import logoImg from '../../../Images/logoimg.png';
 const Footer = () => {
     return (
         <>
@@ -14,34 +15,78 @@ const Footer = () => {
                             <p>Get updates on sales specials and more</p>
                         </div>
                     </Col>
-                    <Col md={3}>
+                    <Col md={4}>
                         <div className="ft-first-sec ">
                             <InputGroup className="mb-3">
                                 <FormControl
-                                placeholder="Recipient's username"
-                                aria-label="Recipient's username"
-                                aria-describedby="basic-addon2"
+                                    placeholder="Recipient's username"
+                                    aria-label="Recipient's username"
+                                    aria-describedby="basic-addon2"
                                 />
                                 <Button variant="outline-danger" id="button-addon2">
-                                Button
+                                    News letter
                                 </Button>
                             </InputGroup>
                         </div>
                     </Col>
-                    <Col md={3                      }>
+                    <Col md={2}>
                         <div className="ft-first-sec ">
                             <h5>FOLLOW MI</h5>
                             <p>We want to hear from you!</p>
                         </div>
                     </Col>
-                    <Col md={1}>
+                    <Col md={3}>
                         <div className="ft-first-sec ">
-                            <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
+                            <FontAwesomeIcon size="2x" icon={faFacebook} ></FontAwesomeIcon>
+                            <FontAwesomeIcon size="2x" icon={faTwitter} ></FontAwesomeIcon>
+                            <FontAwesomeIcon size="2x" icon={faInstagram} ></FontAwesomeIcon>
                         </div>
                     </Col>
                 </Row>
+            </Container>
+            <Container fluid className="bg-secondary">
+                <Row className="row px-5">
+                    <Col md={4} sm={12} className=" mt-md-0 mt-3 pt-5">
+                        <img className="w-25 py-1" src={logoImg} alt="" />
+                        <h5 className="text-uppercase">Xiaomi Inc</h5>
+                        <p>Largest Mobile Store In the Country.</p>
+                    </Col>
+
+
+                    <Col md={4} sm={12} className=" mb-md-0 mb-3 pt-3">
+                        <h5 className="text-uppercase pt-5">Menu</h5>
+                        <ul className="navbar-nav ">
+                            <li className="nav-item p-1">
+                                <NavLink activeClassName="text-danger" className="  nav-link fs-6 border-5 border-transparent fw-bold" to="/home">Home</NavLink>
+                            </li>
+                            <li className="nav-item p-1">
+                                <NavLink activeClassName="text-danger" className="  nav-link fs-6 border-5 border-transparent fw-bold" to="/plans">Plans</NavLink>
+                            </li>
+                            <li className="nav-item p-1">
+                                <NavLink activeClassName="text-danger" className="  nav-link fs-6 border-5 border-transparent fw-bold" to="/allorders">All Orders</NavLink>
+                            </li>
+                            {/* <li className="nav-item p-1">
+                                <NavLink activeClassName="text-danger" className=" nav-link fs-6 border-5 border-transparent fw-bold" to={`/myorder/${user?.email}`} >
+                                    My orders
+                                </NavLink>
+                             </li>
+                            { user?.displayName?
+                            <li className="nav-item p-1">
+                                <NavLink activeClassName="text-danger" className="  nav-link fs-6 border-5 border-transparent fw-bold" to="/admindashboard">Admin Dashboard</NavLink>
+                            </li>
+                            :
+                            ''
+                            } */}
+                        </ul>
+                    </Col>
+                </Row>
+            </Container>
+            <Container fluid className="bg-dark">
+                <div className=" text-center py-3 text-light">
+                    <h3 className="text-light">
+                        © 2021 Copyright Reserve To Xiaomi Mobile Store
+                    </h3>
+                </div>
             </Container>
         </>
     );

@@ -15,7 +15,53 @@
 .cs-bottom-5 {
   bottom: 10rem !important;
 }
+.bg-gray-400{
+  background-color: #aab9c96b;
+}
 
+.vd-bg-1 {
+  background-image: url(https://i.ibb.co/jythxkj/video-1.png);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(31 29 46 / 60%);
+  background-blend-mode: color;
+}
+.vd-bg-2 {
+  background-image: url(https://i.ibb.co/kctdMsS/video-2.png);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(31 29 46 / 60%);
+  background-blend-mode: color;
+}
+.vd-bg-3 {
+  background-image: url(https://i.ibb.co/nQCZ2kk/video-3.png);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(31 29 46 / 60%);
+  background-blend-mode: color;
+}
+
+.icons {
+  background-color: rgba(253, 253, 253, 0.466);
+  background-blend-mode: color;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.text-mi{
+  color:#FF6A1C !important;
+}
+.border-mi{
+  border-color: #ff6a1c !important;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
