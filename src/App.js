@@ -1,11 +1,13 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AuthProvider from './Context/AuthProvider';
 import Login from './Components/Shared/Login/Login';
 import PageNotFound from './Components/Shared/PageNotfound/PageNotFound';
 import Home from './Components/Home/Home/Home';
 import Footer from './Components/Shared/Footer/Footer';
 import Navbar from './Components/Shared/Navbar/Navbar';
+import AddMobiles from './Components/Admin/AddMobiles/AddMobiles';
+import AddReviews from './Components/Admin/AddReviews/AddReviews';
 
 
 function App() {
@@ -13,7 +15,7 @@ function App() {
     <div className="App">
       {/* <AuthProvider> */}
 
-    {/* set route */}
+      {/* set route */}
       <Router>
         <Navbar></Navbar>
         <Switch>
@@ -23,11 +25,16 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          
+
           <Route path="/login">
             <Login></Login>
           </Route>
-          
+          <Route path="/addmobiles">
+            <AddMobiles></AddMobiles>
+          </Route>
+          <Route path="/addreviews">
+            <AddReviews></AddReviews>
+          </Route>
           {/* <Route path="/myorder/:email">
             <MyOrders></MyOrders>
           </Route>
@@ -46,7 +53,7 @@ function App() {
           <PrivateRoute exact path="/admindashboard">
             <AdminDashboard></AdminDashboard>
           </PrivateRoute> */}
-          
+
           <Route exact path="*">
             <PageNotFound></PageNotFound>
           </Route>
