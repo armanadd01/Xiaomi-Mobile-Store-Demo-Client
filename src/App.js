@@ -12,6 +12,10 @@ import Register from './Components/Shared/Login/Register/Register';
 import MakeAdmin from './Components/Admin/MakeAdmin/MakeAdmin';
 import AddOrder from './Components/Purchase/OrderMobile/AddOrder';
 import MobileDetails from './Components/Purchase/MobileDetails/MobileDetails';
+import AdminDashboard from './Components/Admin/AdminDashboard/AdminDashboard';
+import PrivateRoute from './Components/Shared/Login/PrivateRoute/PrivateRoute';
+import MyOrders from './Components/Admin/Myorders/MyOrders';
+import Allorders from './Components/Admin/AllOrders/Allorders';
 
 
 function App() {
@@ -33,28 +37,35 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/addmobiles">
-              <AddMobiles></AddMobiles>
-            </Route>
-            <Route path="/addreviews">
-              <AddReviews></AddReviews>
-            </Route>
             <Route path="/register">
               <Register></Register>
             </Route>
+
+            <Route path="/addmobiles">
+              <AddMobiles></AddMobiles>
+            </Route>
+            <PrivateRoute path="/addreviews">
+              <AddReviews></AddReviews>
+            </PrivateRoute>
+
+            <PrivateRoute path="/admindashboard">
+              <AdminDashboard></AdminDashboard>
+            </PrivateRoute>
             <Route path="/makeadmin">
               <MakeAdmin></MakeAdmin>
             </Route>
 
-            <Route path="/buymobile/:mobileId">
+            <PrivateRoute path="/buymobile/:mobileId">
               <MobileDetails></MobileDetails>
-            </Route>
-            {/* <PrivateRoute path="/myorder/:email">
-            <MyOrders></PrivateRoute>
-          </Route>
-          <PrivateRoute path="/allorders">
-            <Orders></Orders>
-          </PrivateRoute>
+            </PrivateRoute>
+            <PrivateRoute path="/myorder/:email">
+              <MyOrders></MyOrders>
+            </PrivateRoute>
+            <PrivateRoute path="/allorders">
+              <Allorders></Allorders>
+            </PrivateRoute>
+            {/* 
+          
           <PrivateRoute path="/allusers">
             <AllUsers></AllUsers>
           </PrivateRoute>
@@ -75,7 +86,7 @@ function App() {
           <Footer></Footer>
         </Router>
       </AuthProvider>
-    </div>
+    </div >
   );
 }
 

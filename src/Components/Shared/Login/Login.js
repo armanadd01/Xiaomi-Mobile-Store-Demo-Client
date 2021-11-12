@@ -28,10 +28,10 @@ const Login = () => {
         signInWithGoogle(location, history)
     }
     return (
-        <div>
-            <Container>
-                <Row>
-                    <Card className="bg-mi text-center">
+        <div className="mi-banner-login p-5">
+            <Container className="p-5">
+                <Row className="p-5">
+                    <Card className="bg-mi-light shadow text-center">
                         <Card.Header>
                             <Card.Title className="text-light ">Log In </Card.Title>
                         </Card.Header>
@@ -53,12 +53,13 @@ const Login = () => {
                                 />
                                 <Button
                                     type="submit"
-                                    variant="info"
+                                    variant="outline-light"
+                                    className="mx-2"
                                 >Log In</Button>
                                 <NavLink
                                     style={{ textDecoration: 'none' }}
                                     to="/register">
-                                    <Button variant="info">New User? Please Register</Button>
+                                    <Button variant="outline-light" className="mx-2">New User? Please Register</Button>
                                 </NavLink>
                                 {isLoading && <Spinner animation="border" variant="primary" />}
                                 {

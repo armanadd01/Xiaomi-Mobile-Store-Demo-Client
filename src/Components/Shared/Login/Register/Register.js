@@ -25,12 +25,12 @@ const Register = () => {
         e.preventDefault();
     }
     return (
-        <>
-            <Container>
+        <div className="mi-banner-reg p-5">
+            <Container className="p-5">
                 <Row>
-                    <Card className="bg-mi text-center">
+                    <Card className="bg-mi-light shadow text-center">
                         <Card.Header>
-                            <Card.Title className="text-light ">Card Title</Card.Title>
+                            <Card.Title className="text-light ">Register</Card.Title>
                         </Card.Header>
                         <Card.Body>
                             {!isLoading && <form className="p-2" onSubmit={handleLoginSubmit}>
@@ -64,15 +64,15 @@ const Register = () => {
                                 />
                                 <Button
                                     type="submit"
-                                    variant="info"
-                                    className="me-3"
+                                    variant="outline-light"
+                                    className="mx-3"
                                 >Register</Button>
                                 <NavLink
                                     style={{ textDecoration: 'none' }}
                                     to="/login">
                                     <Button
-                                        className="ms-3"
-                                        variant="outline-warning"
+                                        className="mx-3"
+                                        variant="outline-light"
                                     >
                                         Already Registered? Please Login
                                     </Button>
@@ -85,7 +85,7 @@ const Register = () => {
                     </Card>
                 </Row>
             </Container>
-        </>
+        </div>
     );
 };
 

@@ -1,11 +1,11 @@
 import axios from 'axios';
-import React from 'react';
-import { Card, Container } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Button, Card, Container, Modal } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../../Hooks/useAuth';
 
-const AddOrder = (props) => {
-    const { _id, Price, name, img, } = props.mobiles
+const AddOrder = ({ mobiles }) => {
+    const { _id, Price, name, img, } = mobiles;
     const { user } = useAuth();
 
     //from handler
@@ -26,28 +26,30 @@ const AddOrder = (props) => {
     };
 
     return (
-        <Card className="bg-mi text-center">
-            <Card.Header>
-                <Card.Title className="text-light ">Card Title</Card.Title>
-            </Card.Header>
-            <Card.Body>
-                <form className="" onSubmit={handleSubmit(onSubmit)}>
-                    <input className="form-control my-2" placeholder="Enter Id" type="hidden"  {...register("id", { required: true })} defaultValue={_id} />
-                    <input className="form-control " placeholder="Enter Plans Name" type="text"  {...register("name", { required: true, maxLength: 20 })} defaultValue={name} />
-                    <input className="form-control my-2" placeholder="Enter User Name" type="text"  {...register("username")} defaultValue={user?.displayName} />
-                    <input className="form-control  my-2" placeholder="Enter Email" type="text"  {...register("email")} defaultValue={user?.email} />
-                    <label for="label" className="form-label text-start ps-3">Enter Your Delivery Date</label>
-                    <input className="form-control my-2" id="label" placeholder="Enter Date" type="datetime-local" defaultValue={new Date()}  {...register("date")} />
+        <>
 
-                    <input className="form-control my-2" placeholder="Status" type="hidden" defaultValue="Pending"  {...register("status")} />
-                    <input value="Confirm" className="btn btn-outline-light" type="submit" />
+            <Card className="bg-mi text-center">
+                <Card.Header>
+                    <Card.Title className="text-light ">Card Title</Card.Title>
+                </Card.Header>
+                <Card.Body>
+                    <form className="" onSubmit={handleSubmit(onSubmit)}>
+                        <input className="form-control my-2" placeholder="Enter Id" type="hidden"  {...register("id", { required: true })} defaultValue={_id} />
+                        <input className="form-control " placeholder="Enter Plans Name" type="text"  {...register("name", { required: true, maxLength: 20 })} defaultValue={name} />
+                        <input className="form-control my-2" placeholder="Enter User Name" type="text"  {...register("username")} defaultValue={user?.displayName} />
+                        <input className="form-control  my-2" placeholder="Enter Email" type="text"  {...register("email")} defaultValue={user?.email} />
+                        <label for="label" className="form-label text-start ps-3">Enter Your Delivery Date</label>
+                        <input className="form-control my-2" id="label" placeholder="Enter Date" type="datetime-local" defaultValue={new Date()}  {...register("date")} />
+
+                        <input className="form-control my-2" placeholder="Status" type="hidden" defaultValue="Pending"  {...register("status")} />
+                        <input value="Confirm" className="btn btn-outline-light" type="submit" />
 
 
-                </form>
+                    </form>
 
-            </Card.Body>
-        </Card>
-
+                </Card.Body>
+            </Card>
+        </>
     );
 };
 

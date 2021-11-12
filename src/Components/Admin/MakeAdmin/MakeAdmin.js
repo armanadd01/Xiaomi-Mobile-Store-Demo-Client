@@ -11,7 +11,7 @@ const MakeAdmin = () => {
         setEmail(e.target.value);
 
     }
-    console.log("🚀 ~ file: MakeAdmin.js ~ line 14 ~ MakeAdmin ~ handleOnBlur", email)
+
 
     const handleAdminSubmit = e => {
         const user = { email };
@@ -47,7 +47,7 @@ const MakeAdmin = () => {
                                     placeholder="Enter Your Name"
                                     type="email"
                                     name="email"
-                                    onChange={handleOnBlur}
+                                    onBlur={handleOnBlur}
                                 />
 
                                 <Button
