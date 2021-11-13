@@ -8,7 +8,10 @@ const MakeAdmin = () => {
     const { token } = useAuth();
 
     const handleOnBlur = e => {
-        setEmail(e.target.value);
+        const value = e.target.value;
+        console.log("🚀 ~ file: MakeAdmin.js ~ line 12 ~ MakeAdmin ~ value", value)
+
+        setEmail(value);
 
     }
 

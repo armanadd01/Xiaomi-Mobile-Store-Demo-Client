@@ -76,6 +76,8 @@ const useFirebase = () => {
                 getIdToken(user)
                     .then(idToken => {
                         setToken(idToken);
+                        console.log("🚀 ~ file: useFirebase.js ~ line 79 ~ unsubscribed ~ idToken", idToken)
+
                     })
             } else {
                 setUser({})

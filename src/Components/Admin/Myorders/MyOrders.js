@@ -5,16 +5,20 @@ import { Container, Row, Table } from 'react-bootstrap';
 import useAuth from '../../../Hooks/useAuth';
 
 const MyOrders = () => {
-    const { user } = useAuth();
+    const { user, token } = useAuth();
     const [orders, setOrders] = useState([]);
     const [control, setConrol] = useState(false);
     //get myorder data
     useEffect(() => {
-        fetch(`http://localhost:5000/myorder/${user?.email}`)
+        fetch(`http://localhost:5000/myorder?email=${user.email}`, {
+            headers: {
+                'authorization': `Bearer ${token}`
+            }
+        })
             .then(res => res.json())
             .then(data => setOrders(data));
 
-    }, [user?.email]);
+    }, [user.email, token]);
 
     const handleDelete = (id) => {
         fetch(`http://localhost:5000/deleteOrder/${id}`, {

@@ -57,12 +57,12 @@ const Navbar = () => {
                                             <NavLink activeClassName="border-bottom border-mi border-5 rounded-bottom text-mi fw-bold" className="nav-link fs-6 border-5 border-transparent text-mi" to="/home">Home</NavLink>
                                         </li>
                                         <li className="nav-item p-2">
-                                            <NavLink activeClassName="border-bottom border-mi border-5 rounded-bottom  fw-bold" className="nav-link fs-6 border-5 border-transparent text-mi" to="/plans">Plans</NavLink>
+                                            <NavLink activeClassName="border-bottom border-mi border-5 rounded-bottom  fw-bold" className="nav-link fs-6 border-5 border-transparent text-mi" to="/mobiles">Mobiles</NavLink>
                                         </li>
-                                        <li className="nav-item p-2">
+                                        {/* <li className="nav-item p-2">
                                             <NavLink activeClassName="border-bottom border-mi border-5 rounded-bottom text-mi fw-bold" className="nav-link fs-6 border-5 border-transparent text-mi" to="/allorders">All Orders</NavLink>
-                                        </li>
-                                        {user?.displayName ?
+                                        </li> */}
+                                        {/* {user?.displayName ?
                                             <li className="nav-item p-2">
                                                 <NavLink activeClassName="border-bottom border-mi border-5 rounded-bottom text-mi" className="nav-link fs-6 border-5 border-transparent  text-mi" to={`/myorder/${user?.email}`} >
                                                     My orders
@@ -70,7 +70,7 @@ const Navbar = () => {
                                             </li>
                                             :
                                             ''
-                                        }
+                                        } */}
 
                                         {user?.displayName ?
                                             <li className="nav-item p-2">
@@ -98,7 +98,7 @@ const Navbar = () => {
                                         </li>
                                         {user?.displayName ?
                                             <li className="nav-item p-2">
-                                                <h5 className="text-mi">{user?.displayName}</h5>
+                                                <h5 className="text-light">{user?.displayName}</h5>
                                             </li>
                                             :
                                             ''

@@ -15,10 +15,11 @@ const AddOrder = ({ mobiles }) => {
     const onSubmit = data => {
         console.log(data)
         data.email = user?.email;
-        axios.post('https://peaceful-bayou-60710.herokuapp.com/addorder', data)
+        axios.post('http://localhost:5000/addorder', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Order Added Successfully');
+                    window.location.reload();
                     reset();
                 }
 
@@ -39,7 +40,7 @@ const AddOrder = ({ mobiles }) => {
                         <input className="form-control my-2" placeholder="Enter User Name" type="text"  {...register("username")} defaultValue={user?.displayName} />
                         <input className="form-control  my-2" placeholder="Enter Email" type="text"  {...register("email")} defaultValue={user?.email} />
                         <label for="label" className="form-label text-start ps-3">Enter Your Delivery Date</label>
-                        <input className="form-control my-2" id="label" placeholder="Enter Date" type="datetime-local" defaultValue={new Date()}  {...register("date")} />
+                        <input className="form-control my-2" id="label" placeholder="Enter Date" type="date" defaultValue={new Date()}  {...register("date")} />
 
                         <input className="form-control my-2" placeholder="Status" type="hidden" defaultValue="Pending"  {...register("status")} />
                         <input value="Confirm" className="btn btn-outline-light" type="submit" />

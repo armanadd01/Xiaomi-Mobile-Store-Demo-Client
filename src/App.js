@@ -16,6 +16,7 @@ import AdminDashboard from './Components/Admin/AdminDashboard/AdminDashboard';
 import PrivateRoute from './Components/Shared/Login/PrivateRoute/PrivateRoute';
 import MyOrders from './Components/Admin/Myorders/MyOrders';
 import Allorders from './Components/Admin/AllOrders/Allorders';
+import Mobiles from './Components/Home/Mobiles/Mobiles';
 
 
 function App() {
@@ -33,7 +34,9 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-
+            <Route path="/mobiles">
+              <Mobiles></Mobiles>
+            </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
@@ -44,25 +47,12 @@ function App() {
             <Route path="/addmobiles">
               <AddMobiles></AddMobiles>
             </Route>
-            <PrivateRoute path="/addreviews">
-              <AddReviews></AddReviews>
-            </PrivateRoute>
 
             <PrivateRoute path="/admindashboard">
               <AdminDashboard></AdminDashboard>
             </PrivateRoute>
-            <Route path="/makeadmin">
-              <MakeAdmin></MakeAdmin>
-            </Route>
-
             <PrivateRoute path="/buymobile/:mobileId">
               <MobileDetails></MobileDetails>
-            </PrivateRoute>
-            <PrivateRoute path="/myorder/:email">
-              <MyOrders></MyOrders>
-            </PrivateRoute>
-            <PrivateRoute path="/allorders">
-              <Allorders></Allorders>
             </PrivateRoute>
             {/* 
           

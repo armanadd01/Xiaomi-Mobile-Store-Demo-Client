@@ -14,11 +14,12 @@ const Mobiles = () => {
     console.log("🚀 ~ file: Mobiles.js ~ line 14 ~ Mobiles ~ mobiles", mobiles)
 
     return (
-        <div className="py-5 text-center">
+        <div className="py-5 text-center text-mi">
             <Container>
                 <Row>
                     <Col>
-                        <h1>hi</h1>
+                        <h1>See All Our Mobiles</h1>
+                        <hr />
                     </Col>
                 </Row>
                 <Row>
