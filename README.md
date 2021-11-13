@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# TripSter Travel Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project deployed on [FireBase: https://xiaomi-mobile-store.web.app/](https://xiaomi-mobile-store.web.app/).
 
-## Available Scripts
+## 
 
-In the project directory, you can run:
+Admin Email: admin@admin.com
+Admin Pass: 123456
 
-### `npm start`
+In the project src folder user can find a component folder, 
+Here some short description or details of those folders
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `App.js`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+In `App.js` file you can see the Router of this website. I just simply rename the `BrowserRoter as Router` and I use Header Component before the `Switch` and footer after the `Switch` for show in all pages.I use `Navlink` instant of a tag for load the data without loading the site. And also use a private route for not accesable component 
 
-### `npm test`
+### `Header`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In Header Component, site details added. 
+user can fiend here Two Services header div. One is `top-header` and `header-bottom`
+`top-header` contain Header information like "The porupose of this project total Budget of the concert and a short text about project" and `header-bottom` contain site logo and navigation and as well as login button. 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Admin Dashboard`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`Admin Dashboard` will be appere on when a user logged in. without log in no one can go into the Admin Dashboard. In this admin dashboard a user can manege all data of website like `delete` `add` etc
+There is a special Admin role which is `Admin` An admin can control everything and also can create new admin. from existing admin
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `My Order`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`My Order` will show users(his/her) own data. Which is he/She ordered before. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `All Orders`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`All Orders` will show everyone data. Which is a user ordered before. any one can delete this data.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### `Add Mobile`
 
-## Learn More
+In `Admin Dashboard` users can see a `Add Mobile` . where user can add a plan which will show on tha home plans
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Note:  `Firebase` Authentication are used for user Authentication and Authorization**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+for icon  I use `FontAwesome` . And for Css I use `React-Bootstrao` and I also added some custom css. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Thanks Giving
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Thanks for visiting my node server project:smiley: :smiley: :smiley:**
