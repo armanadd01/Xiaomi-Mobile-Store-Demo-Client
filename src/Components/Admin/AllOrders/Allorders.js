@@ -33,7 +33,7 @@ const Allorders = () => {
 
     // UPDATE status
     const handleUpdateStatus = (id) => {
-        const updated = { status: 'Approved' }
+        const updated = { status: 'Shipped' }
         //update order status
         fetch(`https://thawing-meadow-71532.herokuapp.com/updateOrder/${id}`, {
             method: 'PUT',
@@ -48,7 +48,7 @@ const Allorders = () => {
 
                 }
             });
-        console.log(id);
+
     };
     return (
         <Container>

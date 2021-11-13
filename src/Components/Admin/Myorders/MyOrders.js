@@ -7,7 +7,7 @@ import useAuth from '../../../Hooks/useAuth';
 const MyOrders = () => {
     const { user, token } = useAuth();
     const [orders, setOrders] = useState([]);
-    const [control, setConrol] = useState(false);
+    const [control, setControl] = useState(false);
     //get myorder data
     useEffect(() => {
         fetch(`https://thawing-meadow-71532.herokuapp.com/myorder?email=${user.email}`, {
@@ -28,15 +28,15 @@ const MyOrders = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data.deletedCount) {
-                    setConrol(!control);
+                    if (window.confirm('Are You Sure to Delete Order?')) {
+                        setControl(!control);
+                    }
                 } else {
-                    setConrol(false);
+                    setControl(false);
                 }
             });
-        console.log(id);
     };
 
-    console.log(orders)
     return (
         <Container>
             <Row>
@@ -48,6 +48,7 @@ const MyOrders = () => {
                             <th>Name</th>
                             <th>Email</th>
                             <th>Date</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -58,6 +59,7 @@ const MyOrders = () => {
                                 <td>{myorder?.name}</td>
                                 <td>{myorder?.email}</td>
                                 <td>{myorder?.date}</td>
+                                <td>{myorder?.status}</td>
                                 <td>
                                     <button
                                         onClick={() => handleDelete(myorder?._id)}

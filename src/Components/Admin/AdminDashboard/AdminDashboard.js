@@ -10,7 +10,6 @@ import {
     useRouteMatch
 } from "react-router-dom";
 import { Button, Container, ListGroup, Offcanvas } from 'react-bootstrap';
-import Mobiles from '../../Home/Mobiles/Mobiles';
 import AddMobiles from '../AddMobiles/AddMobiles';
 import Allorders from '../AllOrders/Allorders';
 import MyOrders from '../Myorders/MyOrders';
@@ -20,6 +19,8 @@ import AddReviews from '../AddReviews/AddReviews';
 import useAuth from '../../../Hooks/useAuth';
 import AdminRoute from '../../Shared/Login/AdminRoute/AdminRoute';
 import PaymentMethod from '../PaymentMethod/PaymentMethod';
+import ManageMobiles from '../ManageMobiles/ManageMobiles';
+import AllMobiles from '../../AllMobiles/AllMobiles';
 
 const AdminDashboard = () => {
     const [show, setShow] = useState(false);
@@ -82,6 +83,15 @@ const AdminDashboard = () => {
                             </Link>
                         }
                         {admin &&
+                            <Link to={`${url}/manageproduct`}>
+                                <ListGroup.Item className="bg-transparent border-bottom border-0  fw-bold text-light py-1 my-1" as="li"  >
+                                    <Button className="text-light fw-bold fs-5" variant="transparent">
+                                        Manage Product
+                                    </Button>
+                                </ListGroup.Item>
+                            </Link>
+                        }
+                        {admin &&
                             <Link to={`${url}/addmobiles`}>
                                 <ListGroup.Item className="bg-transparent border-bottom border-0  fw-bold text-light py-1 my-1" as="li"  >
                                     <Button className="text-light fw-bold fs-5" variant="transparent">
@@ -123,7 +133,7 @@ const AdminDashboard = () => {
             <Container>
                 <Switch>
                     <Route exact path={path}>
-                        <Mobiles></Mobiles>
+                        <AllMobiles></AllMobiles>
                     </Route>
                     <Route path={`${path}/allorders`}>
                         <Allorders></Allorders>
@@ -137,9 +147,12 @@ const AdminDashboard = () => {
                     <PrivateRoute path={`${path}/addreviews`}>
                         <AddReviews></AddReviews>
                     </PrivateRoute>
-                    <PrivateRoute path={`${path}/addmobiles`}>
+                    <AdminRoute path={`${path}/addmobiles`}>
                         <AddMobiles></AddMobiles>
-                    </PrivateRoute>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/manageproduct`}>
+                        <ManageMobiles></ManageMobiles>
+                    </AdminRoute>
                     <AdminRoute path={`${path}/makeadmin`}>
                         <MakeAdmin></MakeAdmin>
                     </AdminRoute>
