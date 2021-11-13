@@ -27,10 +27,9 @@ const AdminDashboard = () => {
     let { path, url } = useRouteMatch();
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
     return (
         <div>
-
-
             <Offcanvas className="bg-mi-light" show={show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
                     {/* <Offcanvas.Title className=" fw-bold text-light">Menu</Offcanvas.Title> */}
@@ -114,18 +113,14 @@ const AdminDashboard = () => {
                     </ListGroup>
                 </Offcanvas.Body>
             </Offcanvas>
+
             <div className="w-100 bg-mi py-3">
                 <Button className="ms-5" variant="outline-dark" onClick={handleShow}>
                     Open Admin Menu <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
-
                 </Button>
             </div>
+
             <Container>
-
-
-
-
-
                 <Switch>
                     <Route exact path={path}>
                         <Mobiles></Mobiles>

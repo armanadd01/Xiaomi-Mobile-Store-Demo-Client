@@ -4,9 +4,8 @@ import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const Mobile = (props) => {
+const AllMobile = (props) => {
     const { _id, Price, name, img } = props?.mobile;
-
     return (
         <Col md={4} className="my-4">
             <Card style={{ width: '100%' }}>
@@ -29,4 +28,4 @@ const Mobile = (props) => {
     );
 };
 
-export default Mobile;
+export default AllMobile;

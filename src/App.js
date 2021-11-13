@@ -6,17 +6,11 @@ import PageNotFound from './Components/Shared/PageNotfound/PageNotFound';
 import Home from './Components/Home/Home/Home';
 import Footer from './Components/Shared/Footer/Footer';
 import Navbar from './Components/Shared/Navbar/Navbar';
-import AddMobiles from './Components/Admin/AddMobiles/AddMobiles';
-import AddReviews from './Components/Admin/AddReviews/AddReviews';
 import Register from './Components/Shared/Login/Register/Register';
-import MakeAdmin from './Components/Admin/MakeAdmin/MakeAdmin';
-import AddOrder from './Components/Purchase/OrderMobile/AddOrder';
 import MobileDetails from './Components/Purchase/MobileDetails/MobileDetails';
 import AdminDashboard from './Components/Admin/AdminDashboard/AdminDashboard';
 import PrivateRoute from './Components/Shared/Login/PrivateRoute/PrivateRoute';
-import MyOrders from './Components/Admin/Myorders/MyOrders';
-import Allorders from './Components/Admin/AllOrders/Allorders';
-import Mobiles from './Components/Home/Mobiles/Mobiles';
+import AllMobiles from './Components/AllMobiles/AllMobiles';
 
 
 function App() {
@@ -35,7 +29,7 @@ function App() {
               <Home></Home>
             </Route>
             <Route path="/mobiles">
-              <Mobiles></Mobiles>
+              <AllMobiles></AllMobiles>
             </Route>
             <Route path="/login">
               <Login></Login>
@@ -43,31 +37,12 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-
-            <Route path="/addmobiles">
-              <AddMobiles></AddMobiles>
-            </Route>
-
             <PrivateRoute path="/admindashboard">
               <AdminDashboard></AdminDashboard>
             </PrivateRoute>
             <PrivateRoute path="/buymobile/:mobileId">
               <MobileDetails></MobileDetails>
             </PrivateRoute>
-            {/* 
-          
-          <PrivateRoute path="/allusers">
-            <AllUsers></AllUsers>
-          </PrivateRoute>
-          <PrivateRoute path="/adduser">
-            <AddUser></AddUser>
-          </PrivateRoute>
-          <PrivateRoute path="/addorder/:plansId">
-            <AddOrders></AddOrders>
-          </PrivateRoute>
-          <PrivateRoute exact path="/admindashboard">
-            <AdminDashboard></AdminDashboard>
-          </PrivateRoute> */}
 
             <Route exact path="*">
               <PageNotFound></PageNotFound>
