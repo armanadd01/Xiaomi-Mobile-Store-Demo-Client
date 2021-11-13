@@ -37,9 +37,9 @@ const Footer = () => {
                     </Col>
                     <Col md={3}>
                         <div className="ft-first-sec ">
-                            <FontAwesomeIcon size="2x" icon={faFacebook} ></FontAwesomeIcon>
-                            <FontAwesomeIcon size="2x" icon={faTwitter} ></FontAwesomeIcon>
-                            <FontAwesomeIcon size="2x" icon={faInstagram} ></FontAwesomeIcon>
+                            <FontAwesomeIcon className="text-mi" size="2x" icon={faFacebook} ></FontAwesomeIcon>
+                            <FontAwesomeIcon className="text-mi" size="2x" icon={faTwitter} ></FontAwesomeIcon>
+                            <FontAwesomeIcon className="text-mi" size="2x" icon={faInstagram} ></FontAwesomeIcon>
                         </div>
                     </Col>
                 </Row>
@@ -60,23 +60,10 @@ const Footer = () => {
                                 <NavLink activeClassName="text-danger" className="  nav-link fs-6 border-5 border-transparent fw-bold" to="/home">Home</NavLink>
                             </li>
                             <li className="nav-item p-1">
-                                <NavLink activeClassName="text-danger" className="  nav-link fs-6 border-5 border-transparent fw-bold" to="/plans">Plans</NavLink>
+                                <NavLink activeClassName="text-danger" className="  nav-link fs-6 border-5 border-transparent fw-bold" to="/mobiles">mobiles</NavLink>
                             </li>
-                            <li className="nav-item p-1">
-                                <NavLink activeClassName="text-danger" className="  nav-link fs-6 border-5 border-transparent fw-bold" to="/allorders">All Orders</NavLink>
-                            </li>
-                            {/* <li className="nav-item p-1">
-                                <NavLink activeClassName="text-danger" className=" nav-link fs-6 border-5 border-transparent fw-bold" to={`/myorder/${user?.email}`} >
-                                    My orders
-                                </NavLink>
-                             </li>
-                            { user?.displayName?
-                            <li className="nav-item p-1">
-                                <NavLink activeClassName="text-danger" className="  nav-link fs-6 border-5 border-transparent fw-bold" to="/admindashboard">Admin Dashboard</NavLink>
-                            </li>
-                            :
-                            ''
-                            } */}
+
+
                         </ul>
                     </Col>
                 </Row>

@@ -1,4 +1,4 @@
-import { faSignInAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faSignInAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Container } from 'react-bootstrap';
@@ -20,20 +20,20 @@ const Navbar = () => {
                 }}>
                     {/* Site logo */}
 
-                    <div className="navbar navbar-expand-md navbar-warning w-100 m-0 p-0" style={{
+                    <div className="navbar navbar-expand-md flex-nowrap m-0 p-0" style={{
                         zIndex: "99"
                     }}>
-                        <div className="col-md-2 col-sm-4 m-0 p-0 ">
+                        <div className="col-md-2 col-sm-2  m-0 p-0 ">
                             <div className="navbar-brand m-0 p-0 site-logo me-sm-5" >
                                 <NavLink activeClassName=" text-mi" className="nav-link fs-6" to="/home">
-                                    <img className="w-50" src={logoImg} alt="" />
+                                    <img className="w-25" src={logoImg} alt="" />
                                 </NavLink>
                             </div>
 
                         </div>
                         <div className="col-sm-7 d-md-none">
                             <button
-                                className="navbar-toggler ms-5 mt-4 align-sm-middle text-sm-end"
+                                className="navbar-toggler"
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target="#navbarNav"
@@ -41,7 +41,7 @@ const Navbar = () => {
                                 aria-expanded="false"
                                 aria-label="Toggle navigation"
                             >
-                                <span className="navbar-toggler-icon"></span>
+                                <span className="navbar-toggler-icon"><FontAwesomeIcon icon={faBars}></FontAwesomeIcon></span>
                             </button>
                         </div>
                         <div className="col-md-10 col-sm-12 ">
@@ -59,18 +59,7 @@ const Navbar = () => {
                                         <li className="nav-item p-2">
                                             <NavLink activeClassName="border-bottom border-mi border-5 rounded-bottom  fw-bold" className="nav-link fs-6 border-5 border-transparent text-mi" to="/mobiles">Mobiles</NavLink>
                                         </li>
-                                        {/* <li className="nav-item p-2">
-                                            <NavLink activeClassName="border-bottom border-mi border-5 rounded-bottom text-mi fw-bold" className="nav-link fs-6 border-5 border-transparent text-mi" to="/allorders">All Orders</NavLink>
-                                        </li> */}
-                                        {/* {user?.displayName ?
-                                            <li className="nav-item p-2">
-                                                <NavLink activeClassName="border-bottom border-mi border-5 rounded-bottom text-mi" className="nav-link fs-6 border-5 border-transparent  text-mi" to={`/myorder/${user?.email}`} >
-                                                    My orders
-                                                </NavLink>
-                                            </li>
-                                            :
-                                            ''
-                                        } */}
+
 
                                         {user?.displayName ?
                                             <li className="nav-item p-2">

@@ -1,9 +1,12 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 
 const PageNotFound = () => {
     return (
         <div>
-            <h1>Page Not Found</h1>
+            <Container fluid>
+                <img className="img-fluid" src="https://i.ibb.co/rxh9tXw/2663517.jpg" alt="" />
+            </Container>
         </div>
     );
 };
