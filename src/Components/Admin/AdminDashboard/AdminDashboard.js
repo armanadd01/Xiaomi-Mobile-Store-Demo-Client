@@ -22,7 +22,7 @@ import AdminRoute from '../../Shared/Login/AdminRoute/AdminRoute';
 
 const AdminDashboard = () => {
     const [show, setShow] = useState(false);
-    const { user, logout, isLoading } = useAuth();
+    const { user, logout, isLoading, admin } = useAuth();
     let { path, url } = useRouteMatch();
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -65,13 +65,6 @@ const AdminDashboard = () => {
                                 </Button>
                             </ListGroup.Item>
                         </Link>
-                        <Link to={`${url}/allorders`}>
-                            <ListGroup.Item className="bg-transparent border-bottom border-0  fw-bold text-light py-1 my-1" as="li"  >
-                                <Button className="text-light fw-bold fs-5" variant="transparent">
-                                    All Orders
-                                </Button>
-                            </ListGroup.Item>
-                        </Link>
                         <Link to={`${url}/addreviews`}>
                             <ListGroup.Item className="bg-transparent border-bottom border-0  fw-bold text-light py-1 my-1" as="li"  >
                                 <Button className="text-light fw-bold fs-5" variant="transparent">
@@ -79,20 +72,33 @@ const AdminDashboard = () => {
                                 </Button>
                             </ListGroup.Item>
                         </Link>
-                        <Link to={`${url}/addmobiles`}>
-                            <ListGroup.Item className="bg-transparent border-bottom border-0  fw-bold text-light py-1 my-1" as="li"  >
-                                <Button className="text-light fw-bold fs-5" variant="transparent">
-                                    Add Mobiles
-                                </Button>
-                            </ListGroup.Item>
-                        </Link>
-                        <Link to={`${url}/makeadmin`}>
-                            <ListGroup.Item className="bg-transparent border-bottom border-0  fw-bold text-light py-1 my-1" as="li"  >
-                                <Button className="text-light fw-bold fs-5" variant="transparent">
-                                    Make Admin
-                                </Button>
-                            </ListGroup.Item>
-                        </Link>
+                        {admin &&
+                            <Link to={`${url}/allorders`}>
+                                <ListGroup.Item className="bg-transparent border-bottom border-0  fw-bold text-light py-1 my-1" as="li"  >
+                                    <Button className="text-light fw-bold fs-5" variant="transparent">
+                                        All Orders
+                                    </Button>
+                                </ListGroup.Item>
+                            </Link>
+                        }
+                        {admin &&
+                            <Link to={`${url}/addmobiles`}>
+                                <ListGroup.Item className="bg-transparent border-bottom border-0  fw-bold text-light py-1 my-1" as="li"  >
+                                    <Button className="text-light fw-bold fs-5" variant="transparent">
+                                        Add Mobiles
+                                    </Button>
+                                </ListGroup.Item>
+                            </Link>
+                        }
+                        {admin &&
+                            <Link to={`${url}/makeadmin`}>
+                                <ListGroup.Item className="bg-transparent border-bottom border-0  fw-bold text-light py-1 my-1" as="li"  >
+                                    <Button className="text-light fw-bold fs-5" variant="transparent">
+                                        Make Admin
+                                    </Button>
+                                </ListGroup.Item>
+                            </Link>
+                        }
                         <ListGroup.Item className="bg-transparent border-bottom border-0  fw-bold text-light py-1 my-1" as="li"  >
                             <Button onClick={logout} className="text-light fw-bold fs-5" variant="transparent" >Log Out</Button>
                         </ListGroup.Item>
