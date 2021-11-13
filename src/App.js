@@ -43,7 +43,6 @@ function App() {
             <PrivateRoute path="/buymobile/:mobileId">
               <MobileDetails></MobileDetails>
             </PrivateRoute>
-
             <Route exact path="*">
               <PageNotFound></PageNotFound>
             </Route>
