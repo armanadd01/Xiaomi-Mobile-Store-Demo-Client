@@ -19,6 +19,7 @@ import PrivateRoute from '../../Shared/Login/PrivateRoute/PrivateRoute';
 import AddReviews from '../AddReviews/AddReviews';
 import useAuth from '../../../Hooks/useAuth';
 import AdminRoute from '../../Shared/Login/AdminRoute/AdminRoute';
+import PaymentMethod from '../PaymentMethod/PaymentMethod';
 
 const AdminDashboard = () => {
     const [show, setShow] = useState(false);
@@ -99,6 +100,13 @@ const AdminDashboard = () => {
                                 </ListGroup.Item>
                             </Link>
                         }
+                        <Link to={`${url}/pay`}>
+                            <ListGroup.Item className="bg-transparent border-bottom border-0  fw-bold text-light py-1 my-1" as="li"  >
+                                <Button className="text-light fw-bold fs-5" variant="transparent">
+                                    Payment Method
+                                </Button>
+                            </ListGroup.Item>
+                        </Link>
                         <ListGroup.Item className="bg-transparent border-bottom border-0  fw-bold text-light py-1 my-1" as="li"  >
                             <Button onClick={logout} className="text-light fw-bold fs-5" variant="transparent" >Log Out</Button>
                         </ListGroup.Item>
@@ -124,6 +132,9 @@ const AdminDashboard = () => {
                     </Route>
                     <Route path={`${path}/allorders`}>
                         <Allorders></Allorders>
+                    </Route>
+                    <Route path={`${path}/pay`}>
+                        <PaymentMethod></PaymentMethod>
                     </Route>
                     <PrivateRoute path={`${path}/myorder/:email`}>
                         <MyOrders></MyOrders>

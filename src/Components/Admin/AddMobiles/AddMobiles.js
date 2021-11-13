@@ -8,7 +8,7 @@ const AddMobiles = () => {
     //handle plans from
     const onSubmit = data => {
         console.log(data)
-        axios.post('http://localhost:5000/mobiles', data)
+        axios.post('https://thawing-meadow-71532.herokuapp.com/mobiles', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('New Mobile Added Successfully');

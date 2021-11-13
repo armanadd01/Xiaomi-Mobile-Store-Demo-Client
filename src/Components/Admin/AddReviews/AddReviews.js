@@ -8,7 +8,7 @@ const AddReviews = () => {
     //handle Mobile from
     const onSubmit = data => {
         console.log(data)
-        axios.post('http://localhost:5000/reviews', data)
+        axios.post('https://thawing-meadow-71532.herokuapp.com/reviews', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('New Review Added Successfully');

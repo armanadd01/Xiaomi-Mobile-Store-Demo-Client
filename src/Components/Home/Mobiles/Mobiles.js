@@ -7,7 +7,7 @@ const Mobiles = () => {
 
     //get all plans
     useEffect(() => {
-        fetch('http://localhost:5000/mobiles')
+        fetch('https://thawing-meadow-71532.herokuapp.com/mobiles')
             .then(res => res.json())
             .then(data => setMobile(data))
     }, [setMobile]);

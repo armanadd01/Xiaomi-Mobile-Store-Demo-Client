@@ -10,7 +10,7 @@ const MyOrders = () => {
     const [control, setConrol] = useState(false);
     //get myorder data
     useEffect(() => {
-        fetch(`http://localhost:5000/myorder?email=${user.email}`, {
+        fetch(`https://thawing-meadow-71532.herokuapp.com/myorder?email=${user.email}`, {
             headers: {
                 'authorization': `Bearer ${token}`
             }
@@ -21,7 +21,7 @@ const MyOrders = () => {
     }, [user.email, token]);
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/deleteOrder/${id}`, {
+        fetch(`https://thawing-meadow-71532.herokuapp.com/deleteOrder/${id}`, {
             method: "DELETE",
             headers: { "content-type": "application/json" },
         })

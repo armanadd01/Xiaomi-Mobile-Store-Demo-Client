@@ -8,13 +8,13 @@ const Allorders = () => {
     const [control, setControl] = useState(false);
     //get all order
     useEffect(() => {
-        fetch("http://localhost:5000/orders")
+        fetch("https://thawing-meadow-71532.herokuapp.com/orders")
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, [control]);
     //delete order
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/deleteOrder/${id}`, {
+        fetch(`https://thawing-meadow-71532.herokuapp.com/deleteOrder/${id}`, {
             method: "DELETE",
             headers: { "content-type": "application/json" },
         })
@@ -35,7 +35,7 @@ const Allorders = () => {
     const handleUpdateStatus = (id) => {
         const updated = { status: 'Approved' }
         //update order status
-        fetch(`http://localhost:5000/updateOrder/${id}`, {
+        fetch(`https://thawing-meadow-71532.herokuapp.com/updateOrder/${id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(updated)

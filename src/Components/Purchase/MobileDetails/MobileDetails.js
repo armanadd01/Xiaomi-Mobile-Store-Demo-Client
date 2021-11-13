@@ -16,7 +16,7 @@ const MobileDetails = () => {
     const handleShow = () => setShow(true);
     //get mobiles 
     useEffect(() => {
-        fetch(`http://localhost:5000/buymobile/${mobileId}`)
+        fetch(`https://thawing-meadow-71532.herokuapp.com/buymobile/${mobileId}`)
             .then(res => res.json())
             .then(data => setMobile(data))
     }, []);
@@ -30,7 +30,7 @@ const MobileDetails = () => {
     const onSubmit = data => {
         console.log(data)
         data.email = user?.email;
-        axios.post('http://localhost:5000/addorder', data)
+        axios.post('https://thawing-meadow-71532.herokuapp.com/addorder', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Order Added Successfully');
